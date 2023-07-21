@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<style>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #resposta {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+
+</style>
+
+<body>
+
+    <h1>SUPER CALCULADORA!!</h1>
+
+    <h2 id="resposta"> </h2>
+    <script>
+        var n1 = parseFloat(prompt("Digite um número:"));
+        var n2 = parseFloat(prompt("Digite outro número:"));
+        var operacao = prompt("Qual operação deseja realizar (soma ou subtração)?").toLowerCase();
+
+        var resultado;
+        if (operacao === "soma") {
+            resultado = n1 + n2;
+        } else if (operacao === "subtração") {
+            resultado = n1 - n2;
+        } else {
+            alert("Operação inválida!");
+        }
+
+        if (resultado !== undefined) {
+            var resposta = document.getElementById("resposta");
+            resposta.innerText = `O resultado da ${operacao} de ${n1} e ${n2} é ${resultado}`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
